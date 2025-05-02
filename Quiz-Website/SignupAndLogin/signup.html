@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="leftsidebox">
+        <div class="small_signup_box" id="small_signup_box">
+            <div class="header_text">
+                <p>Sign up</p>
+            </div>
+            <div class="input_box">
+                <form class="signup_form" action="signup_script.js" method="POST">
+                    <input type="text" class="input-box" id="gmail_input" name="gmail" placeholder="Gmail">
+                    <input type="text" class="input-box" id="username_input" name="username" placeholder="Username">
+                    <input type="password" class="input-box" id="password_input" name="password"
+                        placeholder="Password ">
+                    <input type="password" class="input-box" id="confirm_password" name="confirm"
+                        placeholder="Confirm Password">
+                    <input class="sign-in-btn" id="sign-in-btn" name="submit" type="submit" value="Sign In">
+                </form>
+                <div class="incorrect" id="incorrect_password">
+                    <p id="incorrect_text"></p>
+                </div>
+                <div class="small_text_box">
+                    <p class="login">Already have an account?<a href="login.html" class="login_link"> Log in</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rightsidebox"></div>
+
+    <script type="module" src="../supabase/supabaseClient.js"></script>
+    <script type="module" src="signup_script.js"></script>
+
+</body>
+
+</html>
