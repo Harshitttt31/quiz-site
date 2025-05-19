@@ -27,6 +27,7 @@ body {
 .navbar {
     position: sticky;
     top: 1rem;
+    margin-top: 3px;
     left: 0;
     margin: 0 auto !important;
     width: 97%;
@@ -41,7 +42,7 @@ body {
     box-shadow: 0px 0px 10px hsl(200, 4%, 41%) !important;
 }
 
-.sticky{
+.sticky {
     position: sticky;
     top: 0;
     z-index: 500;
@@ -110,15 +111,16 @@ body::-webkit-scrollbar-track {
 }
 
 .navbar button {
+    margin-right: 1rem;
     padding: 8px 14px;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 18px;
     color: white;
-    background-color: var(--quizbox-bg);
-    border: 1px solid var(--quizbox-hover);
-    border-radius: 6px;
+    background-color:var(--quizbox-bg);
+    border: 2px solid var(--quizbox-hover);
+    border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
 .navbar button:hover {
@@ -133,6 +135,16 @@ body::-webkit-scrollbar-track {
     cursor: pointer;
 }
 
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.profile-name{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
 
 /* media queries for navbar */
 
@@ -159,4 +171,58 @@ body::-webkit-scrollbar-track {
         left: -25vw;
         width: 25vw;
     }
+}
+
+
+/*------- main container -------*/
+.header_text {
+    padding-top: 1.9rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333333;
+}
+
+.mainCont {
+    position: relative;
+    background-color: #fff;
+    height: 100vh;
+    width: 40%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px #0000004d;
+    top: 3rem;
+    left: 30%;
+}
+
+#resultsTable {
+    width: 60%;
+    border-collapse: collapse;
+    /* removes spacing between borders */
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    padding-top: 20px;
+}
+
+th,td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: 1000;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* zebra striping */
+}
+
+tr:hover {
+    background-color: #e6f7ff;
+    /* row hover effect */
 }
