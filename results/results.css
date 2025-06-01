@@ -1,0 +1,228 @@
+:root {
+    --bg-light: #f4f7fa;
+    --sidebar-dark: #3E2612;
+    --navbar-gold: #2b2d42;
+    --text-dark: #1c1c1c;
+    --hover-accent: #3a86ff;
+    --quizbox-bg: #8ecae6;
+    --quizbox-hover: #219ebc;
+    --sidebar-item: rgba(255, 255, 255, 0.1);
+    --sidebar-item-hover: rgba(255, 255, 255, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/*--------navbar---------- */
+
+.navbar {
+    position: sticky;
+    top: 1rem;
+    margin-top: 3px;
+    left: 0;
+    margin: 0 auto !important;
+    width: 97%;
+    height: 5rem;
+    background-color: var(--navbar-gold);
+    color: var(--bg-light);
+    z-index: 500;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px hsl(200, 4%, 41%) !important;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    transition: top 0.5s ease;
+}
+
+.logo {
+    height: 45px;
+    width: 45px;
+    border-radius: 20px;
+}
+
+/* Optional: Customize scrollbar */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--navbar-gold);
+    /* Scrollbar color */
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(19, 19, 19, 0.33);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+    font-size: 25px;
+    font-weight: 600;
+    font-style: normal;
+    padding-left: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.navbar ul li a:hover {
+    color: var(--quizbox-hover);
+    cursor: pointer;
+}
+
+.navbar .search-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar input {
+    padding: 8px 12px;
+    border: 2px solid var(--text-dark);
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+    background-color: var(--bg-light);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.navbar input:focus {
+    border-color: var(--quizbox-hover);
+    box-shadow: 0 0 5px rgba(176, 96, 32, 0.5);
+}
+
+.navbar button {
+    margin-right: 1rem;
+    padding: 8px 14px;
+    font-size: 18px;
+    color: white;
+    background-color:var(--quizbox-bg);
+    border: 2px solid var(--quizbox-hover);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.navbar button:hover {
+    background-color: var(--quizbox-hover);
+}
+
+.red-placeholder::placeholder {
+    color: red;
+}
+
+#navSVG:hover {
+    cursor: pointer;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.profile-name{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* media queries for navbar */
+
+@media (max-width: 675px) {
+    .search-container {
+        display: none !important;
+        ;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar ul li a {
+        display: none !important;
+    }
+
+    .asideNavbar {
+        left: -50vw;
+        width: 50vw;
+    }
+}
+
+@media (max-width: 768px) and (min-width:500px) {
+    .asideNavbar {
+        left: -25vw;
+        width: 25vw;
+    }
+}
+
+
+/*------- main container -------*/
+.header_text {
+    padding-top: 1.9rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333333;
+}
+
+.mainCont {
+    position: relative;
+    background-color: #fff;
+    height: 100vh;
+    width: 40%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px #0000004d;
+    top: 3rem;
+    left: 30%;
+}
+
+#resultsTable {
+    width: 60%;
+    border-collapse: collapse;
+    /* removes spacing between borders */
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    padding-top: 20px;
+}
+
+th,td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: 1000;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+    /* zebra striping */
+}
+
+tr:hover {
+    background-color: #e6f7ff;
+    /* row hover effect */
+}

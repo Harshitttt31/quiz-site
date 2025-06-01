@@ -1,0 +1,125 @@
+:root {
+  --bg-light: #f4f7fa;
+  --sidebar-dark: #3E2612;
+  --navbar-gold: #2b2d42;
+  --text-dark: #1c1c1c;
+  --hover-accent: #3a86ff;
+  --quizbox-bg: #8ecae6;
+  --quizbox-hover: #219ebc;
+}
+
+body {
+  background-color: #F2EFE7;
+  margin: 0;
+  display: flex;
+  font-family:'Nunito', sans-serif;
+}
+
+.leftsidebox {
+  height: 100vh;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #9ACBD0; */
+}
+
+.rightsidebox {
+
+  height: 100vh;
+  width: 40%;
+  background-color: var(--quizbox-bg)
+}
+
+.small_signup_box {
+  background-color: #ffffff;
+  height: 80vh;
+  width: 40%;
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px #0000004d;
+}
+
+.header_text {
+  text-align: center;
+  max-width: auto;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #333333;
+}
+
+.input_box {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 5%;
+}
+
+.input-box {
+  width: 90%;
+  height: 40px;
+  font-size: 16px;
+  padding: 5px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.input-box:hover {
+  border: 2px solid #131313;
+}
+
+.sign-in-btn {
+  background-color: var(--quizbox-bg);
+  border: 1px solid var(--quizbox-hover);
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-in-btn:hover {
+  background-color: var(--quizbox-hover);
+}
+
+.small_text_box {
+  text-align: center;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.login {
+  color: #13131394;
+}
+
+.login_link {
+  color: var(--quizbox-bg);
+  text-decoration: none;
+}
+
+.login_link:hover {
+  color: var(--quizbox-hover);
+  font-weight: bold;
+}
+
+#incorrect_password_login {
+  display: none;
+  color: red;
+  font-size: 12px;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}

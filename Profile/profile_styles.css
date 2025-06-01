@@ -1,0 +1,238 @@
+:root {
+    --bg-light: #f4f7fa;
+    --sidebar-dark: #3E2612;
+    --navbar-gold: #2b2d42;
+    --text-dark: #1c1c1c;
+    --hover-accent: #3a86ff;
+    --quizbox-bg: #8ecae6;
+    --quizbox-hover: #219ebc;
+    --sidebar-item: rgba(255, 255, 255, 0.1);
+    --sidebar-item-hover: rgba(255, 255, 255, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: "Nunito", cursive;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/*--------navbar---------- */
+
+.navbar {
+    position: absolute;
+    ;
+    top: 1rem;
+    margin: 0 1.5% !important;
+    width: 97%;
+    height: 5rem;
+    background-color: var(--navbar-gold);
+    color: var(--bg-light);
+    z-index: 500;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px hsl(200, 4%, 41%) !important;
+}
+
+.logo {
+    height: 45px;
+    width: 45px;
+    border-radius: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    font-size: 25px;
+    font-weight: 600;
+    font-style: normal;
+    padding-left: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.navbar ul li a:hover {
+    color: var(--quizbox-hover);
+    cursor: pointer;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.navbar button {
+    margin-right: 2rem;
+    padding: 8px 14px;
+    font-size: 18px;
+    color: white;
+    background-color:var(--quizbox-bg);
+    border: 2px solid var(--quizbox-hover);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.navbar button:hover {
+    background-color: var(--quizbox-hover);
+}
+
+#navSVG:hover {
+    cursor: pointer;
+}
+
+/* main form  */
+.profile-box {
+    position: relative;
+    background-color: #fff;
+    height: auto;
+    width: 40%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px #0000004d;
+    top: 8rem;
+    left: 30%;
+}
+
+.header_text {
+    padding-top: 2rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333333;
+}
+
+.input_box {
+    margin-top: 10px;
+}
+
+.submit-btn {
+    background-color: var(--quizbox-bg) !important;
+    color: var(--bg-light) !important;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid var(--quizbox-hover) !important;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--quizbox-hover) !important;
+}
+
+main form {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+}
+
+main form input {
+    padding: 10px;
+    border-radius: 5px;
+    width: 90%;
+    margin-bottom: 10px;
+    border: 2px solid lightgray;
+}
+
+select {
+    color: #757575;
+}
+
+select:focus,
+select:valid {
+    color: black;
+}
+
+main form input:hover {
+    border: 2px solid black;
+}
+
+main form select {
+    padding: 10px;
+    border-radius: 5px;
+    width: 90%;
+    margin-bottom: 10px;
+    border: 2px solid lightgray;
+}
+
+main form select:hover {
+    border: 2px solid black;
+}
+
+main form label {
+    align-self: start;
+    margin-left: 2rem;
+}
+
+/* media queries for navbar */
+
+@media (max-width: 675px) {
+    .search-container {
+        display: none !important;
+        ;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar ul li a {
+        display: none !important;
+    }
+
+    .asideNavbar {
+        left: -50vw;
+        width: 50vw;
+    }
+}
+
+@media (max-width: 768px) and (min-width:500px) {
+    .asideNavbar {
+        left: -25vw;
+        width: 25vw;
+    }
+}
+
+/* Optional: Customize scrollbar */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--navbar-gold);
+    /* Scrollbar color */
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(19, 19, 19, 0.33);
+}
+
+/* Optional: Customize scrollbar */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: var(--navbar-gold);
+    /* Scrollbar color */
+    border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
